@@ -1,0 +1,32 @@
+logo: /assets/img/logos/spring.svg
+name: Spring
+menus:
+  - id: overview
+    group: Spring
+    icon: emoji_objects
+    name: 概览
+  - id: esl
+    icon: bolt
+    name: 电子价签
+    menus:
+      - id: spring-application
+        name: 'SpringApplication'
+  - id: paper
+    name: 纸质价签
+    icon: bookmarks
+    menus:
+      - id: application-context
+        name: 'ApplicationContext'
+  - id: setting
+    name: 设置
+    icon: settings
+    menus:
+      - id: data-build
+        name: 数据组装
+  - id: task
+    icon: task
+    name: 任务
+    menus:
+      - id: switch-plan
+        name: 切换计划
+
