@@ -9,7 +9,7 @@ date: 2021-08-25 10:56:42 +800
 version: 1.0
 formatterOn: "@formatter:on"
 ---
-<div class="container-fluid" id="app">
+<div class="container-fluid">
     <div class="header text-center">
         <h3 class="title">XXX切换计划切换清单</h3>
     </div>
@@ -20,19 +20,15 @@ formatterOn: "@formatter:on"
                 <div class="card-body">
                     <ul class="timeline">
                         <li :class=" index % 2 == 1 ? 'timeline-inverted' : ''" v-for="(task,index) in tasks">
-                            <div class="timeline-badge danger">
+                            <div class="timeline-badge primary">
                                 <i class="material-icons" v-text="task.icon"></i>
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
-                                    <span class="badge badge-pill badge-danger" v-text="task.title">Some Title</span>
+                                    <span class="badge badge-pill badge-primary" v-text="task.title">Some Title</span>
                                 </div>
                                 <div class="timeline-body">
-                                    <p>Called I Miss the Old Kanye That’s all it was Kanye And I love you like Kanye
-                                        loves Kanye Famous viewing @ Figueroa and 12th in downtown LA 11:10PM</p>
-                                    <p>What if Kanye made a song about Kanye Royère doesn't make a Polar bear bed but
-                                        the Polar bear couch is my favorite piece of furniture we own It wasn’t any
-                                        Kanyes Set on his goals Kanye</p>
+                                    <p v-text="task.description"></p>
                                     <hr>
                                 </div>
                                 <div class="timeline-footer text-right">
@@ -58,7 +54,7 @@ formatterOn: "@formatter:on"
                 tasks: [{
                     icon: "card_travel",
                     title: "ESL服务配置",
-                    description: "配置门店ESL服务",
+                    description: "配置门店ESL服务，该服务用于电子价签基站、价签绑定与价签刷新，请确认服务提供商是否已提供ESL服务。",
                     actions: [{
                         label: "去配置",
                     }, {
@@ -67,8 +63,41 @@ formatterOn: "@formatter:on"
                 }, {
                     icon: "extension",
                     title: "ESL基站配置与绑定",
-                    description: "",
+                    description: "当ESL服务配置完成后，可进行基站绑定，请确认基站是否已正确接入ESL服务。",
                     actions: [{
+                        label: "去配置",
+                    }, {
+                        label: "已完成"
+                    }]
+                }, {
+                    icon: "extension",
+                    title: "数据组装规则",
+                    description: "配置价签数据组装规则，如是否启用库存。",
+                    actions: [{
+                        label: "跳过"
+                    }, {
+                        label: "去配置",
+                    }, {
+                        label: "已完成"
+                    }]
+                }, {
+                    icon: "extension",
+                    title: "配置布局、类型与模板",
+                    description: "配置价签布局、类型与模板",
+                    actions: [{
+                        label: "跳过"
+                    }, {
+                        label: "去配置",
+                    }, {
+                        label: "已完成"
+                    }]
+                }, {
+                    icon: "extension",
+                    title: "电子价签定时全量任务",
+                    description: "配置电子价签定时全量任务",
+                    actions: [{
+                        label: "跳过"
+                    }, {
                         label: "去配置",
                     }, {
                         label: "已完成"

@@ -9,3 +9,80 @@ date: 2021-08-25 10:56:42 +800
 version: 1.0
 formatterOn: "@formatter:on"
 ---
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header card-header-rose card-header-icon row">
+                    <div class="col-6">
+                        <div class="card-icon">
+                            <i class="material-icons">assignment</i>
+                        </div>
+                        <h4 class="card-title">切换计划</h4>
+                    </div>
+                    <div class="col-6 text-right">
+                        <button type="button" class="btn btn-round btn-primary">
+                            <i class="material-icons">add_task</i>
+                        </button>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th class="text-center">#</th>
+                                <th>名称</th>
+                                <th>门店数量</th>
+                                <th>切换时间</th>
+                                <th>实施人</th>
+                                <th>状态</th>
+                                <th class="text-right">操作</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr v-for="(plan,index) in switchPlans">
+                                <td class="text-center" v-text="index + 1">1</td>
+                                <td v-text="plan.name">Andrew Mike</td>
+                                <td v-text="plan.stores">Develop</td>
+                                <td v-text="plan.switchDate">2013</td>
+                                <td v-text="plan.operator">2013</td>
+                                <td v-text="plan.status">2013</td>
+                                <td class="td-actions text-right">
+                                    <a type="button" rel="tooltip" class="btn btn-info btn-link">查看</a>
+                                    <a href="switch-list.html" type="button" rel="tooltip" class="btn btn-primary btn-link">实施</a>
+                                    <a type="button" rel="tooltip" class="btn btn-warning btn-link">取消</a>
+                                </td>
+                            </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    Vue.createApp({
+        data() {
+            return {
+                switchPlans: [{
+                    name: "XXX门店切换计划",
+                    stores: 1,
+                    status: "未开始",
+                    operator: "张三",
+                    switchDate: "2021-10-01 22:00:00"
+                }]
+            }
+        },
+        mounted() {
+
+        },
+        methods: {}
+    })
+        .mount('#app')
+</script>
