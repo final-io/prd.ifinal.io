@@ -12,11 +12,12 @@
         <!-- End Navbar -->
 
         <div class="content">
+
             <div class="tab-content">
                 <div class="tab-pane active" id="preview">
                     {{ content }}
                 </div>
-                <div class="tab-pane" id="docs">
+                <div class="tab-pane " id="article">
                     <div class="row">
                         <div class="col-md-9">
                             <article class="markdown" id="markdown"></article>
@@ -38,8 +39,6 @@
                     <pre><code id="code"></code></pre>
                 </div>
             </div>
-
-
         </div>
 
         <div class="container">
@@ -51,7 +50,7 @@
 {% include script.html %}
 {% include jekyll/sidebar.jekyll %}
 
-<script src="/assets/app/post.js"></script>
+<script src="/assets/app/markdown.js"></script>
 
 <script>
     $(document).ready(function () {

@@ -22,7 +22,7 @@ menus:
     icon: settings
     menus:
       - id: switch-item
-        name: 切换清单
+        name: 切换配置清单
   - id: task
     icon: task
     name: 任务
