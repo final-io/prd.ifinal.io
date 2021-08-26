@@ -11,8 +11,37 @@
         {% include navbar/navbar.html %}
         <!-- End Navbar -->
 
-        <div class="content" id="app">
-            {{ content }}
+        <div class="content">
+
+
+            <div class="tab-content text-center">
+                <div class="tab-pane active" id="preview">
+                    {{ content }}
+                </div>
+                <div class="tab-pane" id="docs">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <article class="markdown" id="markdown"></article>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="sticky-sidebar sticky-top terms-sidebar" style="top: 100px;">
+                                <div class="toc" id="toc">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane markdown" id="source">
+                    <textarea id="editor" class="d-none" hidden style="width: 100%" rows="100">
+                        {% if page.docs == true %}
+                        {% include_relative {{ page.path | replace: '.html' : '-docs.md' | split: "/" | last  }} %}
+                        {% endif %}
+                    </textarea>
+                    <pre><code id="code"></code></pre>
+                </div>
+            </div>
+
+
         </div>
 
         <div class="container">
@@ -23,9 +52,9 @@
 
 {% include script.html %}
 {% include jekyll/sidebar.jekyll %}
-<script>
 
-</script>
+<script src="/assets/app/post.js"></script>
+
 <script>
     $(document).ready(function () {
         var typedTexts = document.querySelectorAll('.typed-text');
