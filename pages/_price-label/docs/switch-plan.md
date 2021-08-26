@@ -35,9 +35,14 @@ formatterOn: "@formatter:on"
 ## 需求详情
 
 * 切换计划菜单用于实施人员查看、操作已有实施计划或新建实施计划，更多请查看[切换计划](../task/switch-plan)。
+
+<iframe id="embed_dom" name="embed_dom" frameborder="0" style="display:block;width:100%; height:600px;" src="../task/switch-plan"></iframe>
+
+
 * 计划切换清单用于实施人员快速实现价签系统切换，更多请查看[计划切换清单](../task/switch-plan/switch-list)
 * 设置切换清单用于开发人员配置初始计划配置项，更多请查看[切换配置清单](../settings/switch-item)
 
+<iframe id="embed_dom" name="embed_dom" frameborder="0" style="display:block;width:100%; height:600px;" src="../settings/switch-item"></iframe>
 
 
 ## 记录
