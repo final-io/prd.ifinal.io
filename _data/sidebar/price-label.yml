@@ -17,12 +17,12 @@ menus:
     menus:
       - id: application-context
         name: 'ApplicationContext'
-  - id: setting
+  - id: settings
     name: 设置
     icon: settings
     menus:
-      - id: data-build
-        name: 数据组装
+      - id: switch-item
+        name: 切换清单
   - id: task
     icon: task
     name: 任务
