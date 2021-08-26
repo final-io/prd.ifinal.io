@@ -38,3 +38,16 @@ formatterOn: "@formatter:on"
 
 ![切换配置清单](switch-item-list.png)
 
+
+
+## 新增/修改配置条目
+
+在切换配置清单列表的右上角，通过按钮<button class="btn btn-round btn-sm btn-primary" data-toggle="modal" data-target="#addSwitchPlan"><i class="material-icons">add_task</i></button>
+进行配置条目的新增，或通过配置清单的操作“修改”对已有配置条目进行修改。
+
+交互方式：Model框
+
+
+
+![保存配置条目](save-switch-item.png)
+

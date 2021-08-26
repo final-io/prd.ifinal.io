@@ -29,4 +29,9 @@ menus:
     menus:
       - id: switch-plan
         name: 切换计划
-
+  - id: docs
+    icon: article
+    name: 需求列表
+    menus:
+      - id: switch-plan
+        name: 门店实施切换计划
