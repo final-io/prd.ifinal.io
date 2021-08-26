@@ -1,22 +1,28 @@
-logo: /assets/img/logos/spring.svg
-name: Spring
+logo: /assets/img/logos/github.svg
+name: 价签
 menus:
-  - id: overview
-    group: Spring
-    icon: emoji_objects
-    name: 概览
-  - id: esl
-    icon: bolt
-    name: 电子价签
+  - id: docs
+    icon: article
+    name: 需求列表
     menus:
-      - id: spring-application
-        name: 'SpringApplication'
-  - id: paper
-    name: 纸质价签
-    icon: bookmarks
-    menus:
-      - id: application-context
-        name: 'ApplicationContext'
+      - id: switch-plan
+        name: 门店实施切换计划
+#  - id: overview
+#    group: Spring
+#    icon: emoji_objects
+#    name: 概览
+#  - id: esl
+#    icon: bolt
+#    name: 电子价签
+#    menus:
+#      - id: spring-application
+#        name: 'SpringApplication'
+#  - id: paper
+#    name: 纸质价签
+#    icon: bookmarks
+#    menus:
+#      - id: application-context
+#        name: 'ApplicationContext'
   - id: settings
     name: 设置
     icon: settings
@@ -29,9 +35,4 @@ menus:
     menus:
       - id: switch-plan
         name: 切换计划
-  - id: docs
-    icon: article
-    name: 需求列表
-    menus:
-      - id: switch-plan
-        name: 门店实施切换计划
+
