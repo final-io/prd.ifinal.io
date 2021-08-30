@@ -17,13 +17,15 @@
             <ul class="navbar-nav bd-navbar-nav flex-row">
                 <li class="nav-item">
                     <ul class="nav nav-tabs" data-tabs="tabs">
+                        {% if fileType == 'html'%}
                         <li class="nav-item">
-                            <a class="nav-link active" href="#preview" data-toggle="tab">
+                            <a class="nav-link active " href="#preview" data-toggle="tab">
                                 <i class="material-icons">view_carousel</i>预览
                             </a>
                         </li>
+                        {% endif %}
                         <li class="nav-item">
-                            <a class="nav-link" href="#article" data-toggle="tab">
+                            <a class="nav-link {% if fileType == 'md'%} active {% endif %}" href="#article" data-toggle="tab">
                                 <i class="material-icons">article</i>文档
                             </a>
                         </li>

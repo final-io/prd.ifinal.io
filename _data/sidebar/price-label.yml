@@ -6,7 +6,7 @@ menus:
     name: 需求列表
     menus:
       - id: switch-plan
-        name: 门店实施切换计划
+        name: 门店切换实施计划
 #  - id: overview
 #    group: Spring
 #    icon: emoji_objects
@@ -27,12 +27,12 @@ menus:
     name: 设置
     icon: settings
     menus:
-      - id: switch-item
-        name: 切换配置清单
-  - id: task
-    icon: task
-    name: 任务
+      - id: switch-option
+        name: 切换配置项
+  - id: schedule
+    icon: schedule
+    name: 工作计划
     menus:
       - id: switch-plan
-        name: 切换计划
+        name: 切换实施计划
 

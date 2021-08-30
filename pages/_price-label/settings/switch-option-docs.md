@@ -1,6 +1,6 @@
 ---
 formatterOff: "@formatter:off"
-title: 切换配置清单
+title: 切换配置项
 subtitle: switch_item_docs 
 summary: switch_item_docs
 categories: [] 
@@ -10,13 +10,13 @@ version: 1.0
 formatterOn: "@formatter:on"
 ---
 
-# 切换配置清单
+# 切换配置项
 
 ## 概述
 
-切换配置清单为系统中的多个配置项，每一项或多项配置共同组织成一个最小配置单元。
+切换配置项为系统中的多个配置项，每一项或多项配置共同组织成一个最小配置单元。
 
-## 切换配置条目
+## 切换配置项
 
 **切换条目**为价签系统中一条切换配置项，即配置的最小操作单元或最小操作单元的组合。
 
@@ -32,15 +32,15 @@ formatterOn: "@formatter:on"
 
 
 
-## 切换配置清单
+## 切换配置项清单
 
-切换配置清单以列表的形式展示系统中的**切换配置条目**。
+切换配置清单以列表的形式展示系统中的**切换配置项**。
 
-![切换配置清单](switch-item-list.png)
+![切换配置项清单](switch-option-list.png)
 
 
 
-## 新增/修改配置条目
+## 新增/修改配置项
 
 在切换配置清单列表的右上角，通过按钮<button class="btn btn-round btn-sm btn-primary" data-toggle="modal" data-target="#addSwitchPlan"><i class="material-icons">add_task</i></button>
 进行配置条目的新增，或通过配置清单的操作“修改”对已有配置条目进行修改。
@@ -49,7 +49,7 @@ formatterOn: "@formatter:on"
 
 
 
-![保存配置条目](save-switch-item.png)
+![保存配置条目](save-switch-option.png)
 
 ## 系统配置条目
 

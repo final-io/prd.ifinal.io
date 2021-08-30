@@ -1,6 +1,5 @@
 ---
 formatterOff: "@formatter:off"
-layout: docs
 title: 门店实施切换计划
 subtitle: switch-plan 
 summary: switch-plan
