@@ -35,13 +35,30 @@ formatterOn: "@formatter:on"
 
 * 切换计划菜单用于实施人员查看、操作已有实施计划或新建实施计划，更多请查看[切换计划](../task/switch-plan)。
 
-<iframe id="embed_dom" name="embed_dom" frameborder="0" style="display:block;width:100%; height:600px;" src="../task/switch-plan"></iframe>
+<iframe id="embed_dom" name="embed_dom" frameborder="0" style="display:block;width:100%; height:600px;" src="../schedule/switch-plan"></iframe>
 
 
 * 计划切换清单用于实施人员快速实现价签系统切换，更多请查看[计划切换清单](../task/switch-plan/switch-list)
 * 设置切换清单用于开发人员配置初始计划配置项，更多请查看[切换配置清单](../settings/switch-item)
 
-<iframe id="embed_dom" name="embed_dom" frameborder="0" style="display:block;width:100%; height:600px;" src="../settings/switch-item"></iframe>
+<iframe id="embed_dom" name="embed_dom" frameborder="0" style="display:block;width:100%; height:600px;" src="../settings/switch-option"></iframe>
+
+## 切换流程
+
+### 电子价签
+
+1. **确认切换门店清单**：实施人员需要在切换前准备好此次切换的门店清单，在创建实施计划时勾选此次切换的门店清单，在后续的切换流程中，都将以该门店清单作为切换检查范围，同一切换计划仅支持一个商家，多个商家需要创建多个切换计划。
+2. **确认ESL服务已经就绪**：实施人员需要确认ESL服务提供商品是否已提供好ESL服务，并且确认网络可以正常通信。
+3. **确认门店基站已接入ESL服务**：实施人员需要确认门店基站已正确接入门店的ESL服务。
+4. **配置门店ESL服务地址**：实施人员在价签系统实施人员操作页面进行门店ESL服务配置。
+5. **操作门店基站绑定**：实施人员在价签系统实施人员操作页面进行门店基站绑定操作。
+6. **配置门店/商家数据组装规则（可选）**：实施人员在价签系统实施人员操作页面进行门店/数据组装规则配置，以满足门店/商家特定业务需求。
+7. **配置门店定时刷新任务（可选）**：实施人员在价签系统实施人员操作页面进行门店电子价签定时刷新任务的初始化。
+8. **操作门店价签绑定与解绑**：实施人员通过APP操作价签绑定/解绑操作。
+9. **确认价签刷新结果**：实施人员确认价签刷新结果是否与业务预期一致，完成此次价签切换。
+
+![电子价签](http://assets.processon.com/chart_image/612d8ce01e08534042693197.png)
+
 
 
 ## 记录

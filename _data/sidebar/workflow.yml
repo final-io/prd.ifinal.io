@@ -1,0 +1,22 @@
+logo: /assets/img/logos/github.svg
+name: 工作流
+menus:
+  - id: docs
+    icon: article
+    name: 需求列表
+    menus:
+      - id: switch-plan
+        name: 门店切换实施计划
+  - id: settings
+    name: 设置
+    icon: settings
+    menus:
+      - id: switch-application
+        name: 切换应用
+  - id: schedule
+    icon: schedule
+    name: 工作计划
+    menus:
+      - id: switch-plan
+        name: 切换实施计划
+

@@ -65,6 +65,8 @@ collections_dir: pages
 collections:
   price-label:
     output: true
+  workflow:
+    output: true
 defaults:
   - scope:
       path: ""
