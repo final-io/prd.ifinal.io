@@ -1,6 +1,9 @@
 logo: /assets/img/logos/github.svg
 name: 工作流
 menus:
+  - id: overview
+    icon: dashboard
+    name: 概览
   - id: docs
     icon: article
     name: 需求列表
