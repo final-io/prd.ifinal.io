@@ -29,7 +29,8 @@ formatterOn: "@formatter:on"
                             </h5>
                         </div>
 
-                        <div :id="'collapse@'+index" class="collapse" :class=" index == 0 ? 'show' : '' " role="tabpanel" aria-labelledby="headingOne"
+                        <div :id="'collapse@'+index" class="collapse" :class=" index == 0 ? 'show' : '' "
+                             role="tabpanel" aria-labelledby="headingOne"
                              data-parent="#accordion">
                             <div class="card-body bg-gray-100">
                                 <div class="table-responsive">
@@ -54,12 +55,21 @@ formatterOn: "@formatter:on"
                                             <td v-text="item.switchDate">2013</td>
                                             <td v-text="item.operator">2013</td>
                                             <td v-text="item.status">2013</td>
-                                            <td class="td-actions text-right">
+                                            <td class="td-actions text-right justify-content-end">
+                                                <a href="switch-list.html" type="button"
+                                                   class="btn btn-primary btn-link" data-toggle="tooltip"
+                                                   data-placement="top" title="跳转到业务系统配置页面">去执行
+                                                    <i class="material-icons">help</i>
+                                                </a>
                                                 <a href="switch-list.html" type="button" rel="tooltip"
-                                                   class="btn btn-primary btn-link">去执行</a>
-                                                <a href="switch-list.html" type="button" rel="tooltip"
-                                                   class="btn btn-success btn-link">已完成</a>
-                                                <a type="button" rel="tooltip" class="btn btn-warning btn-link">跳过</a>
+                                                   class="btn btn-success btn-link" data-toggle="tooltip"
+                                                   data-placement="top" title="调用业务系统回调接口检查配置是否完成">
+                                                    已完成<i class="material-icons">help</i>
+                                                </a>
+                                                <a type="button" rel="tooltip" class="btn btn-warning btn-link"
+                                                   data-toggle="tooltip"
+                                                   data-placement="top" title="如果配置项允许跳过，则直接标记切换项状态">跳过<i
+                                                        class="material-icons">help</i></a>
                                             </td>
                                         </tr>
 
@@ -108,9 +118,9 @@ formatterOn: "@formatter:on"
                         operator: "张三",
                         status: "未开始",
                     }]
-                },{
+                }, {
                     "name": "纸质价签切换流程",
-                    "switchItems": [ {
+                    "switchItems": [{
                         icon: "extension",
                         title: "数据组装规则",
                         description: "配置价签数据组装规则，如是否启用库存。",

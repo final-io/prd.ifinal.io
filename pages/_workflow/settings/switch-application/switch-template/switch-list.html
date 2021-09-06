@@ -43,12 +43,12 @@ formatterOn: "@formatter:on"
                             <td v-text="item.description">Develop</td>
 
                             <td class="td-actions text-right justify-content-end">
-                                <a href="switch-list.html" type="button" rel="tooltip"
-                                   class="btn btn-primary btn-link" v-if="index != 0">上移</a>
-                                <a href="switch-list.html" type="button" rel="tooltip"
-                                   class="btn btn-warning btn-link" v-if="index != switchItems.length - 1">下移</a>
-                                <a href="switch-list.html" type="button" rel="tooltip"
-                                   class="btn btn-danger btn-link">移除</a>
+                                <button  type="button" rel="tooltip"
+                                   class="btn btn-primary btn-link" v-if="index != 0" @click="swap(index,index-1)">上移</button>
+                                <button  type="button" rel="tooltip"
+                                   class="btn btn-warning btn-link" v-if="index != switchItems.length - 1" @click="swap(index,index+1)">下移</button>
+                                <button href="switch-list.html" type="button" rel="tooltip"
+                                   class="btn btn-danger btn-link" @click="remove(index)">移除</button>
                             </td>
                         </tr>
 
@@ -128,7 +128,6 @@ formatterOn: "@formatter:on"
                 newSwitchItem: {
                     title: null,
                     modules: [],
-                    status: "启用",
                     description: null,
                 }
             }
@@ -137,9 +136,16 @@ formatterOn: "@formatter:on"
 
         },
         methods: {
+            swap(first,second){
+                this.switchItems[first] = this.switchItems.splice(second,1,this.switchItems[first])[0];
+            },
+            remove(index){
+                this.switchItems.splice(index,1);
+            },
             saveSwitchItem(){
                 let $this = this;
-                $this.switchItems.push($this.newSwitchItem);
+                $this.switchItems.push({"title":"新配置","description":"配置描述"});
+
             }
         }
     }).mount('#preview')
