@@ -118,7 +118,7 @@
       },
       getQueryString(name, search) {
         search = search || window.location.search.substr(1)
-            || window.location.hash.split("?")[1];
+                || window.location.hash.split("?")[1];
         let reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
         let r = search.match(reg);
         if (r != null) {
@@ -175,16 +175,16 @@
         converter.setFlavor('github');
         let html = converter.makeHtml(content);
         document.getElementById('markdown').innerHTML = html;
-        anchors.add();
+        // anchors.add();
       },
       toc() {
-        $('#toc').toc({
-          headers: 'article h2,article h3, article h4, article h5, article h6',
-          classes: {
-            item: "nav-item fs--1",
-            list: "nav"
-          }
-        });
+        // $('#toc').toc({
+        //   headers: 'article h2,article h3, article h4, article h5, article h6',
+        //   classes: {
+        //     item: "nav-item fs--1",
+        //     list: "nav"
+        //   }
+        // });
       },
       highlight() {
         // document.querySelectorAll('pre code').forEach((block) => {
@@ -229,5 +229,5 @@
       }
     }
   })
-  .mount('#app')
+          .mount('#app')
 </script>

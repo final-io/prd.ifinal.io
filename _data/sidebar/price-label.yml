@@ -7,28 +7,12 @@ menus:
     menus:
       - id: switch-plan
         name: 门店切换实施计划
-#  - id: overview
-#    group: Spring
-#    icon: emoji_objects
-#    name: 概览
-#  - id: esl
-#    icon: bolt
-#    name: 电子价签
-#    menus:
-#      - id: spring-application
-#        name: 'SpringApplication'
-#  - id: paper
-#    name: 纸质价签
-#    icon: bookmarks
-#    menus:
-#      - id: application-context
-#        name: 'ApplicationContext'
-  - id: settings
-    name: 设置
+  - id: paper
+    name: 纸质价签
     icon: settings
     menus:
-      - id: switch-option
-        name: 切换配置项
+      - id: custom-label
+        name: 自定义价签
   - id: schedule
     icon: schedule
     name: 工作计划

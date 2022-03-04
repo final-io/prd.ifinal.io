@@ -10,12 +10,12 @@ Vue.createApp({
   mounted() {
     let $this = this;
 
-    $this.initMarkdown();
-    $this.processYmal($this.markdown.ymal);
-    $this.processContent($this.markdown.content);
-    $this.toc();
-    $this.highlight();
-    $this.initHeader();
+    // $this.initMarkdown();
+    // $this.processYmal($this.markdown.ymal);
+    // $this.processContent($this.markdown.content);
+    // $this.toc();
+    // $this.highlight();
+    // $this.initHeader();
 
   },
   methods: {
@@ -160,7 +160,7 @@ Vue.createApp({
       converter.setFlavor('github');
       let html = converter.makeHtml(content);
       document.getElementById('markdown').innerHTML = html;
-      anchors.add();
+      // anchors.add();
     },
     toc() {
       $('#toc').toc({
