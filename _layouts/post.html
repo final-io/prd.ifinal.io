@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh">
+{% include head.html %}
+
+<body class="g-sidenav-show  bg-gray-200">
+<!-- Extra details for Live View on GitHub Pages -->
+<!-- Google Tag Manager (noscript) -->
+<!-- End Google Tag Manager (noscript) -->
+{% include sidebar/sidebar.html %}
+<main id="app" class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
+    <!-- Navbar -->
+    {% include navbar/navbar.html %}
+    <!-- End Navbar -->
+    <div class="container-fluid mt-7">
+        <section class="section section-text m-0 p-0">
+            <div class="card " style="min-height: calc(100vh - 200px)">
+                <div class="card-header card-header-primary text-white border-bottom">
+                    <div class="row">
+                        <div class="col-6">
+                            <h4 class="card-title">{{ page.title }}</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-body">
+                    <div class="tab-content tab-space">
+                        <div class="tab-pane active" id="preview">
+                            <div class="row">
+                                <div class="col-md-10 col-sm-12">
+                                    <article class="markdown" id="markdown"></article>
+                                </div>
+                                <div class="col-md-2 d-none d-md-block">
+                                    <div class="sticky-sidebar sticky-top terms-sidebar" style="top: 100px;">
+                                        <div class="toc" id="toc">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane markdown" id="source">
+                            <textarea id="editor" class="d-none" hidden style="width: 100%" rows="100">{% include_relative {{ page.path | split: "/" | last }} %}</textarea>
+                            <pre><code id="code"></code></pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div id="gitalk-container"></div>
+                </div>
+            </div>
+        </section>
+        {% include footer.html %}
+
+    </div>
+</main>
+{% include fixed-plugin.html %}
+</body>
+{% include script.html %}
+{% include jekyll/sidebar.jekyll %}
+{% include jekyll/post.jekyll %}
+</html>
+

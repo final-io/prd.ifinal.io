@@ -1,4 +1,4 @@
-{% assign paths = page.path | replace: '_', '' | replace: '.md' : '' | split: '/' %}
+{% assign paths = page.path | replace: '_', '' | replace: '.md' : '' | replace: '.html' : '' | split: '/' %}
 <script>
   Vue.createApp({
     data() {
@@ -31,6 +31,18 @@
       $this.toc();
       $this.highlight();
       $this.initHeader();
+
+      var gitalk = new Gitalk({
+        clientID: 'd5980c0f53133a01c696',
+        clientSecret: '98ca40d7ad860c9455ae3fd04675e53b4900aa44',
+        repo: 'docs.ifinal.io',
+        owner: 'final-io',
+        admin: ['ilikly'],
+        id: location.pathname,      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
 
     },
     methods: {
@@ -118,7 +130,7 @@
       },
       getQueryString(name, search) {
         search = search || window.location.search.substr(1)
-                || window.location.hash.split("?")[1];
+            || window.location.hash.split("?")[1];
         let reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
         let r = search.match(reg);
         if (r != null) {
@@ -229,5 +241,5 @@
       }
     }
   })
-          .mount('#app')
+  .mount('#app')
 </script>

@@ -212,4 +212,4 @@ Vue.createApp({
     }
   }
 })
-.mount('#markdown')
+.mount('#app')
