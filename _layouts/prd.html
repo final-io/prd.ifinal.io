@@ -1,47 +1,59 @@
 <!DOCTYPE html>
-<html lang="zh">
-{% include head.html %}
+<html lang="zh-CN" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<body class="g-sidenav-show  bg-gray-200">
-<!-- Extra details for Live View on GitHub Pages -->
-<!-- Google Tag Manager (noscript) -->
-<!-- End Google Tag Manager (noscript) -->
-{% include sidebar/sidebar.html %}
-<main id="app" class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
-    <!-- Navbar -->
-    {% include navbar/navbar.html %}
-    <!-- End Navbar -->
-    <div class="container-fluid mt-7">
-        <div class="tab-content tab-space">
-            <div class="tab-pane active">
-                {{ content }}
-            </div>
-            <div class="tab-pane" id="preview">
-                <div class="row">
-                    <div class="col-md-10 col-sm-12">
-                        <article class="markdown" id="markdown"></article>
-                    </div>
-                    <div class="col-md-2 d-none d-md-block">
-                        <div class="sticky-sidebar sticky-top terms-sidebar" style="top: 100px;">
-                            <div class="toc" id="toc">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="tab-pane markdown" id="source">
-                <textarea id="editor" class="d-none" hidden style="width: 100%" rows="100">{% include_relative {{ page.path | split: "/" | last }} %}</textarea>
-                <pre><code id="code"></code></pre>
-            </div>
+    <!-- ===============================================-->
+    <!--    Document Title-->
+    <!-- ===============================================-->
+    <title>Falcon | Dashboard &amp; Web App Template</title>
+
+    <!-- ===============================================-->
+    <!--    Favicons-->
+    <!-- ===============================================-->
+    {% include favicons.html %}
+    <meta name="theme-color" content="#ffffff">
+    <script src="https://prium.github.io/falcon/v3.8.0/assets/js/config.js"></script>
+    <script src="https://prium.github.io/falcon/v3.8.0/vendors/overlayscrollbars/OverlayScrollbars.min.js"></script>
+
+    <!-- ===============================================-->
+    <!--    Stylesheets-->
+    <!-- ===============================================-->
+    {% include style-sheets.html %}
+</head>
+
+<body>
+<!-- ===============================================-->
+<!--    Main Content-->
+<!-- ===============================================-->
+<main class="main" id="top">
+    <div class="container" data-layout="container">
+        <script>
+            var isFluid = JSON.parse(localStorage.getItem('isFluid'));
+            if (isFluid) {
+                var container = document.querySelector('[data-layout]');
+                container.classList.remove('container');
+                container.classList.add('container-fluid');
+            }
+        </script>
+        {% include sidebar.html %}
+        <div class="content">
+            {% include navbar/navbar.html %}
+            {{ content }}
         </div>
-        {% include footer.html %}
-
     </div>
 </main>
-{% include fixed-plugin.html %}
-</body>
-{% include script.html %}
+<!-- ===============================================-->
+<!--    End of Main Content-->
+<!-- ===============================================-->
+{% include setting-panel.html %}
+<!-- ===============================================-->
+<!--    JavaScripts-->
+<!-- ===============================================-->
+{% include scripts.html %}
 {% include jekyll/sidebar.jekyll %}
-{% include jekyll/post.jekyll %}
-</html>
+</body>
 
+</html>
