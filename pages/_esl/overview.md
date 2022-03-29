@@ -1,6 +1,5 @@
 ---
 formatterOff: "@formatter:off"
-layout: prd
 title: overview
 subtitle: overview
 summary: overview
