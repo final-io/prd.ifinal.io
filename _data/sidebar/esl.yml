@@ -5,17 +5,5 @@ menus:
     icon: dashboard
     name: '概览'
   - id: terms-and-definitions
-    icon: dashboard
+    icon: join_inner
     name: '术语与定义'
-    menus:
-      - id: template-type-and-layout
-        name: '模板、类型与布局'
-      - id: datasource
-        name: '数据源'
-  - id: settings
-    icon: settings
-    group: Setting
-    name: '设置'
-    menus:
-      - id: change-mapping
-        name: '变更映射'
